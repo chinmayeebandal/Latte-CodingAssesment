@@ -1,9 +1,15 @@
 import React from 'react';
 
 const Photo = props => (
-  <li className="img-wrap">
-    <img src={props.url} alt=""/>
-  </li>
+  
+    <img 
+        className="card--image"
+        alt={props.alt_description}
+        src={props.url} 
+        width="50%"
+        height="50%"
+    ></img>
+ 
 );
 
 export default Photo;

@@ -6,7 +6,7 @@ const PhotoList = props => {
 	let imgs = results.map(img => <Photo url={img.urls.small} key={img.id}/>);
 
 	return (
-		<ul className="img-list">
+		<ul className="card-list">
 			{imgs}
 		</ul>
 	);
