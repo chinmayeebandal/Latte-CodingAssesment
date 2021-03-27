@@ -10,6 +10,9 @@ const Photo = props => (
           width="50%"
           height="50%"
         ></img>
+       
+        
+        
     </div>
     
  
