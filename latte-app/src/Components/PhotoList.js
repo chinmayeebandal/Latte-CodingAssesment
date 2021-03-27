@@ -9,8 +9,8 @@ const PhotoList = props => {
             <div className="card-user" >
                   <Photo url={img.urls.small}/>
                   <div className="card-contents">
-                      <p>{img.user.name}</p>
-                      <img src={img.user.profile_image.small} alt="profile pics of users"></img>
+                      <p className="user-name">{img.user.name}</p>
+                      <img src={img.user.profile_image.small} alt="profile pics of users" className="avatar"></img>
                   </div>
              </div>
              
