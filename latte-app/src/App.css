@@ -76,6 +76,11 @@
   color: red;
 }
 
+.card-contents {
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+}
+
 @media (min-width: 768px) {
   .form {
     grid-template-columns: auto 1fr auto;

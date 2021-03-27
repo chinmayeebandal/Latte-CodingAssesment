@@ -5,14 +5,18 @@ const PhotoList = props => {
 	const results = props.data;
 	let imgs = results.map(img => 
 
-        <div className="card-user" key={img.id}>
-             <Photo url={img.urls.small}/>
-             <div className="card-user details">
-                 <p>{img.user.name}</p>
-                  <img src={img.user.profile_image.small} alt="profile pics of users"></img>
+        <div className="card" key={img.id}>
+            <div className="card-user" >
+                  <Photo url={img.urls.small}/>
+                  <div className="card-contents">
+                      <p>{img.user.name}</p>
+                      <img src={img.user.profile_image.small} alt="profile pics of users"></img>
+                  </div>
              </div>
              
         </div>
+        
+        
     );
 
 	return (
