@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import PhotoList from './Components/PhotoList';
+import axios from 'axios';
 
 
-const CLIENT_ID = "CTHvf_PuzbyzA1rpthv9aONqaQcOGkSnawBkvicCRyc";
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 export default class App extends Component {
 	constructor() {
 		super();
@@ -13,10 +14,10 @@ export default class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch('https://api.unsplash.com/photos/?client_id=' + CLIENT_ID)
-			.then(res => res.json())
-			.then(data => {
-				this.setState({ imgs: data });
+		axios.get('https://api.unsplash.com/photos/?client_id=' + CLIENT_ID)
+			.then(res => {
+				const photo = res.data;
+				this.setState({ imgs: photo });
 			})
 			.catch(err => {
 				console.log('Error happened during fetching!', err);
